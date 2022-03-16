@@ -1,5 +1,5 @@
 import TwitterApi from "twitter-api-v2";
-import { tweet } from "../lib/twitter"
+import {tweet} from "../lib/twitter";
 
 const twitterClient = new TwitterApi({
   // /functions/.env
@@ -12,4 +12,4 @@ const twitterClient = new TwitterApi({
 
 export const tweetHoge = async (): Promise<void> => {
   await tweet(twitterClient);
-}
+};

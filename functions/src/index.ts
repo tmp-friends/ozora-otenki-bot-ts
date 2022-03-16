@@ -1,3 +1,3 @@
-import * as Pubsub from "./pubsub"
+import * as Pubsub from "./pubsub";
 
-export const pubsub = { ...Pubsub }
+export const pubsub = {...Pubsub};
