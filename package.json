@@ -1,0 +1,23 @@
+{
+  "name": "ozora-otenki-bot-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmp-friends/ozora-otenki-bot-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmp-friends/ozora-otenki-bot-ts/issues"
+  },
+  "homepage": "https://github.com/tmp-friends/ozora-otenki-bot-ts#readme"
+}
