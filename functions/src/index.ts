@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import {tweetHoge} from "./core";
+import {tweetWeatherInfo} from "./core";
 
 const runtimeOpts = {
   timeoutSeconds: 180,
@@ -12,7 +12,7 @@ export const tweet = functions
     .onRun(async (_context) => {
       console.log("test");
       try {
-        await tweetHoge();
+        await tweetWeatherInfo();
       } catch (e) {
         console.error(e);
       }
