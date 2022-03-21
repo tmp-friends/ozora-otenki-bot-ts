@@ -11,10 +11,9 @@ const twitterClient = new TwitterApi({
   accessSecret: `${process.env.ACCESS_SECRET}`,
 });
 
-const TOKYO_CODE = "130010";
-
 export const tweetWeatherInfo = async (): Promise<void> => {
-  const weatherInfo = await new WeatherAPI(TOKYO_CODE).getWeatherInfo();
+  const weatherInfo =
+    await new WeatherAPI(`${process.env.TOKYO_CODE}`).getWeatherInfo();
   console.log(weatherInfo);
 
   await tweet(twitterClient, weatherInfo);
