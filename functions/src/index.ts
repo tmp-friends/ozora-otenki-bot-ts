@@ -10,7 +10,6 @@ export const tweet = functions
     .runWith(runtimeOpts)
     .pubsub.schedule("every 1 minutes")
     .onRun(async (_context) => {
-      console.log("test");
       try {
         await tweetWeatherInfo();
       } catch (e) {

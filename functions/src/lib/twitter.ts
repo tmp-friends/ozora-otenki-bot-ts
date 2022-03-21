@@ -18,7 +18,15 @@ export const tweet = async (
 
 export const createTweetText = (weatherInfo: Weather): string => {
   const contentText =
-    `${weatherInfo.todayTelop} ${weatherInfo.todayMaxTemperature}`;
+    "みなさんおはようございます！時刻は7時30分！\n" +
+    "\n" +
+    "今日のお空はどんな空～❓\n" +
+    "大空お天気の時間です✨\n" +
+    "\n" +
+    `今日の都心部は${weatherInfo.todayTelop}、` +
+      `最高気温は${weatherInfo.todayMaxTemperature}℃です！\n` +
+    "\n" +
+    "それでは通勤・通学気をつけて、行ってらっしゃ～い！";
 
   return contentText;
 };
