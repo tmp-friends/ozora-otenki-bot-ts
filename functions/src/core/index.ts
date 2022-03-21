@@ -1,5 +1,6 @@
 import TwitterApi from "twitter-api-v2";
 import {tweet} from "../lib/twitter";
+import {WeatherAPI} from "../lib/weatherAPI";
 
 const twitterClient = new TwitterApi({
   // /functions/.env
@@ -10,6 +11,10 @@ const twitterClient = new TwitterApi({
   accessSecret: `${process.env.ACCESS_SECRET}`,
 });
 
-export const tweetHoge = async (): Promise<void> => {
-  await tweet(twitterClient);
+export const tweetWeatherInfo = async (): Promise<void> => {
+  const weatherInfo =
+    await new WeatherAPI(`${process.env.TOKYO_CODE}`).getWeatherInfo();
+  console.log(weatherInfo);
+
+  await tweet(twitterClient, weatherInfo);
 };
