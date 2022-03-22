@@ -2,7 +2,7 @@ import TwitterApi from "twitter-api-v2";
 import {Weather} from "../model/types/weather";
 
 // __dirname = ozora-otenki-bot-ts/functions/lib/lib
-const imagesFolderPath = "../functions/src/assets/images";
+const imagesFolderPath = "./src/assets/images";
 
 export const tweet = async (
     twitterClient: TwitterApi,
