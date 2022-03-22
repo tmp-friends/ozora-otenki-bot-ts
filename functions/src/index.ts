@@ -6,11 +6,11 @@ const runtimeOpts = {
   memory: "512MB" as const,
 };
 
-export const tweet = functions
+export const twitterBot = functions
     .runWith(runtimeOpts)
-    .pubsub.schedule("every 1 minutes")
+    // 8h進んでいる時間を指定
+    .pubsub.schedule("30 15 * * *")
     .onRun(async (_context) => {
-      console.log("test");
       try {
         await tweetWeatherInfo();
       } catch (e) {
