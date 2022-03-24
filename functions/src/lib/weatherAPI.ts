@@ -5,8 +5,8 @@ import {Weather} from "../model/types/weather";
  * 天気予報APIとやりとりするクラス
  */
 export class WeatherAPI {
-  readonly BASE_URL = "https://weather.tsukumijima.net/api/forecast/city";
   private static axiosRequestConfig: AxiosRequestConfig;
+  readonly BASE_URL = "https://weather.tsukumijima.net/api/forecast/city";
 
   /**
    * 天気データを取得したい都市を設定
