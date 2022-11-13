@@ -8,9 +8,9 @@ const runtimeOpts = {
 
 export const twitterBot = functions
     .runWith(runtimeOpts)
-    // 8h進んでいる時間を指定
-    .pubsub.schedule("30 15 * * *")
-    .onRun(async (_context) => {
+    .pubsub.schedule("30 7 * * *")
+    .timeZone("Asia/Tokyo")
+    .onRun(async (__context) => {
       try {
         await tweetWeatherInfo();
       } catch (e) {
